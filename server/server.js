@@ -1321,11 +1321,11 @@
     var protectedData = {
         users: {
             "35c62d76-8152-4626-8712-eeb96381bea8": {
-                userName: "Peter",
+                userName: "Peter Darkovski",
                 email: "peter@abv.bg",
-                avatarUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFc6nu-hZXjFxRxKYo-suaU4HgLKnhpRBLYA&usqp=CAU",
-                country: "England",
-                about: "Peter James Crouch (born 30 January 1981). English former professional footballer who played as a striker. Fan of United since 10",
+                avatarUrl: "https://s3-us-west-1.amazonaws.com/artavita/avatars/13459/medium/13566998_1203094516367498_6496088784633079087_n.jpg?1478005430",
+                country: "Bulgaria",
+                about: "Peter Darkovski is a abstract painter from Vidin with a very distinctive style",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
             "847ec027-f659-4086-8032-5173e2f9c93a": {
@@ -1341,7 +1341,7 @@
         }
     };
     var seedData = {
-        blogs: {
+        artworks: {
             "ff436770-76c5-40e2-b231-77409eda7a61": {
                 "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
                 "imageUrl": "https://icdn.strettynews.com/wp-content/uploads/2023/03/fbl-eng-pr-man-utd-southampton.jpg",

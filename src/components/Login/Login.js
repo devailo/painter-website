@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { useContext } from "react"
 import { AuthContext } from "../../contexts/AuthContext"
 import { useForm } from "../../hooks/useForm"
@@ -9,14 +10,14 @@ const LoginFormKeys = {
 
 export const Login = () => {
     const { onLoginSubmit } = useContext(AuthContext)
-    const { values, changeHandler } = useForm({
+    const { values, changeHandler, onSubmit } = useForm({
         [LoginFormKeys.Email]: '',
         [LoginFormKeys.Password]: ''
     }, onLoginSubmit)
 
     return (
         <section id="login-page" className="auth">
-            <form id="login" method="POST" onSubmit={onLoginSubmit}>
+            <form id="login" method="POST" onSubmit={onSubmit}>
                 <div className="container">
                     <div className="brand-logo"></div>
                     <h1>Login</h1>
@@ -29,7 +30,7 @@ export const Login = () => {
                     <input type="submit" value="Login" className="btn submit" />
 
                     <p className="field">
-                        <span>If you dont have a profile click <a href="/register">here</a></span>
+                        <span>If you dont have a profile click <Link to="/register">here</Link></span>
                     </p>
 
                 </div>
