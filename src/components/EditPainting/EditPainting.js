@@ -3,10 +3,10 @@ import { useEffect } from "react"
 import { useForm } from "../../hooks/useForm"
 import { useService } from "../../services/useService"
 import { paintingsServiceFactory } from "../../services/paintingsService"
+import { usePaintingContext } from "../../contexts/PaintingContext"
 
-export const EditPainting = ({
-    onEditPaintingSubmit
-}) => {
+export const EditPainting = () => {
+    const {onEditPaintingSubmit} = usePaintingContext()
     const { paintingId } = useParams()
     const paintingsService = useService(paintingsServiceFactory)
     const { values, changeHandler, onSubmit, changeValues } = useForm({

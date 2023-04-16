@@ -1,8 +1,9 @@
+import { usePaintingContext } from "../../contexts/PaintingContext"
 import { GalleryEntry } from "./GalleryEntry/GalleryEntry"
 
-export const Gallery = ({
-    paintings
-}) => {
+export const Gallery = () => {
+    const {paintings} = usePaintingContext()
+    
     return (
         <section id="catalog-page">
             <h1>Gallery</h1>

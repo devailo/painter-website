@@ -1,45 +1,68 @@
-import { useEffect, useState, useContext } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate, useParams, Link } from "react-router-dom"
 
 import { paintingsServiceFactory } from "../../services/paintingsService"
+import * as commentService from '../../services/commentService'
 import { useService } from "../../services/useService"
-import { AuthContext } from "../../contexts/AuthContext"
+import { useAuthContext } from "../../contexts/AuthContext"
+
+import { AddComment } from "./AddComment/AddComment"
+import { usePaintingContext } from "../../contexts/PaintingContext"
+
 
 export const PaintingDetails = () => {
-    const { userId } = useContext(AuthContext)
-    const [username, setUsername] = useState('')
-    const [comment, setComment] = useState('')
     const { paintingId } = useParams()
+    const { userId, isAuthenticated, username } = useAuthContext()
+    const {deletePainting} = usePaintingContext()
     const [painting, setPainting] = useState({})
     const paintingsService = useService(paintingsServiceFactory)
     const navigate = useNavigate()
 
     useEffect(() => {
-        paintingsService.getOne(paintingId)
-            .then(result => {
-                setPainting(result)
+        Promise.all([
+            paintingsService.getOne(paintingId),
+            commentService.getAll(paintingId)
+        ]).then(([paintingData, comments]) => {
+            setPainting({
+                ...paintingData,
+                comments
             })
+        })
     }, [paintingId])
 
-    const onCommentSubmit = async (e) => {
-        e.preventDefault()
+    const onCommentSubmit = async (values) => {
+        const response = await commentService.create(paintingId, values.comment)
 
-        const result = await paintingsService.createComment(paintingId, {
-            username,
-            comment
-        })
+        console.log(response);
 
-        setPainting(state => ({ ...state, comments: { ...state.comments, [result._id]: result } }))
-        setUsername('')
-        setComment('')
+        setPainting(state =>
+        ({
+            ...state,
+            comments: [
+                ...state.comments,
+                {
+                    ...response,
+                    author: {
+                        username
+                    }
+                }
+            ]
+        }))
+
     }
 
     const onDeleteClick = async () => {
-        await paintingsService.delete(painting._id)
+        // eslint-disable-next-line no-restricted-globals
+        const deleteConfirm = confirm(`Are you sure you want to delete paintaing ${painting.title}`)
 
-        //TODO: delete from state
+        if (deleteConfirm) {
+            await paintingsService.delete(painting._id)
 
-        navigate('/gallery')
+            deletePainting(painting._id)
+
+            navigate('/gallery')
+        }
+
     }
 
     return (
@@ -57,16 +80,16 @@ export const PaintingDetails = () => {
                 <div className="details-comments">
                     <h2>Comments:</h2>
                     <ul>
-                        {painting.comments && Object.values(painting.comments).map(c => (
+                        {painting.comments && painting.comments.map(c => (
                             <li key={c._id} className="comment">
-                                <p>{c.username} : {c.comment}</p>
+                                <p>{c.author.username}: {c.comment}</p>
                             </li>
                         ))}
                     </ul>
 
-                    {/* {!Object.values(oneArt.comments).length && (
+                    {!painting.comments?.length && (
                         <p className="no-comment">no comments</p>
-                    )} */}
+                    )}
                 </div>
 
                 {painting._ownerId === userId && (
@@ -78,14 +101,7 @@ export const PaintingDetails = () => {
 
             </div>
 
-            <article className="create-comment">
-                <label>Add new comment:</label>
-                <form className="form" onSubmit={onCommentSubmit}>
-                    <input type="text" name="username" placeholder="username" value={username} onChange={(e) => setUsername(e.target.value)} />
-                    <textarea name="comment" placeholder="Comment...." value={comment} onChange={(e) => setComment(e.target.value)}></textarea>
-                    <input type="submit" className="btn submit" value="Add Comment" />
-                </form>
-            </article>
+            {isAuthenticated && <AddComment onCommentSubmit={onCommentSubmit} />}
         </section>
     )
 }

@@ -26,12 +26,6 @@ export const paintingsServiceFactory = (token) => {
         return result
     }
 
-    const createComment = async (paintingId, data) => {
-        const result = await request.post(`${baseUrl}/${paintingId}/comments`, data)
-
-        return result
-    }
-    
     const edit = (paintingId, data) => request.put(`${baseUrl}/${paintingId}`, data)
 
     const deletePainting = (paintingId) => request.delete(`${baseUrl}/${paintingId}`)
@@ -42,7 +36,7 @@ export const paintingsServiceFactory = (token) => {
         getOne,
         create,
         edit,
-        createComment,
+        // createComment,
         delete: deletePainting
     }
 }

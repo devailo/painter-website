@@ -1,10 +1,10 @@
 import { useState } from "react"
 
 import { useForm } from "../../hooks/useForm"
+import { usePaintingContext } from "../../contexts/PaintingContext"
 
-export const UploadPainting = ({
-    onUploadArtSubmit
-}) => {
+export const UploadPainting = () => {
+    const {onUploadArtSubmit} = usePaintingContext()
     const {values, changeHandler, onSubmit} = useForm({
         title: '',
         category: '',

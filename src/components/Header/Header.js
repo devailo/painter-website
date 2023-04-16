@@ -1,14 +1,15 @@
-import { useContext } from "react"
 import { Link } from "react-router-dom"
 
-import { AuthContext } from "../../contexts/AuthContext"
+import { useAuthContext } from "../../contexts/AuthContext"
 
 export const Header = () => {
-    const { isAuthenticated, userEmail } = useContext(AuthContext)
+    const { isAuthenticated, username , userEmail } = useAuthContext()
     return (
         <header>
             <h1><Link className="home" to="/">Darkovski</Link></h1>
-                <span>{userEmail}</span>
+            {isAuthenticated && (
+                <span> Welcome,  {username}</span>
+            )}
             <nav>
                 <Link to="/gallery">Gallery</Link>
                 {isAuthenticated && (

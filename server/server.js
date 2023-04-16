@@ -1321,7 +1321,7 @@
     var protectedData = {
         users: {
             "35c62d76-8152-4626-8712-eeb96381bea8": {
-                userName: "Peter Darkovski",
+                username: "Peter Darkovski",
                 email: "peter@abv.bg",
                 avatarUrl: "https://s3-us-west-1.amazonaws.com/artavita/avatars/13459/medium/13566998_1203094516367498_6496088784633079087_n.jpg?1478005430",
                 country: "Bulgaria",
@@ -1329,7 +1329,7 @@
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
             "847ec027-f659-4086-8032-5173e2f9c93a": {
-                userName: "John",
+                username: "John",
                 email: "john@abv.bg",
                 avatarUrl: "https://www.usanetwork.com/sites/usablog/files/styles/blog-post-embedded--mobile/public/2023/02/how-to-watch-john-wick.jpg",
                 country: "USA",
