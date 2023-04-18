@@ -1323,17 +1323,25 @@
             "35c62d76-8152-4626-8712-eeb96381bea8": {
                 username: "Peter Darkovski",
                 email: "peter@abv.bg",
-                avatarUrl: "https://s3-us-west-1.amazonaws.com/artavita/avatars/13459/medium/13566998_1203094516367498_6496088784633079087_n.jpg?1478005430",
+                avatarUrl: "https://i.imgur.com/YMlEdmB.jpg",
                 country: "Bulgaria",
-                about: "Peter Darkovski is a abstract painter from Vidin with a very distinctive style",
+                about: "Peter Darkovski is an abstract painter from Vidin with a very distinctive style",
+                hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
+            },
+            "847ec027-f659-4086-8032-5173e2f9c93b": {
+                username: "John",
+                email: "john@abv.bg",
+                avatarUrl: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/john-travolta-bill-dunkley.jpg",
+                country: "USA",
+                about: "I am an actor who dabbles in paintings",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
             "847ec027-f659-4086-8032-5173e2f9c93a": {
-                username: "John",
-                email: "john@abv.bg",
-                avatarUrl: "https://www.usanetwork.com/sites/usablog/files/styles/blog-post-embedded--mobile/public/2023/02/how-to-watch-john-wick.jpg",
-                country: "USA",
-                about: "I am considered one of the greatest fans of Manchester United ever lived.",
+                username: "davinci",
+                email: "davinci@abv.bg",
+                avatarUrl: "https://i.natgeofe.com/n/37c3c776-b8cb-4be1-988a-cf593c776b88/01-leonardo-da-vinci-book-talk_square.jpg",
+                country: "Italy",
+                about: "I am a legend reborn to sell my paintings here",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             }
         },
@@ -1343,30 +1351,33 @@
     var seedData = {
         artworks: {
             "ff436770-76c5-40e2-b231-77409eda7a61": {
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "imageUrl": "https://icdn.strettynews.com/wp-content/uploads/2023/03/fbl-eng-pr-man-utd-southampton.jpg",
-                "title": "Three observations after Manchester United’s draw against Southampton",
-                "category": "Premier League",
-                "description": "Manchester United were not helped by the Casemiro red card, but the result still feels like a disappointing one because a win would have come as a huge boost in the race for top four. Manchester United were unable to return to winning ways in the Premier League on Sunday when they were held by bottom club Southampton.",
-                "text": "A 10-man Manchester United were kept to a scoreless draw at Old Trafford. Manchester United were not helped by the Casemiro red card, but the result still feels like a disappointing one because a win would have come as a huge boost in the race for top four. Manchester United were unable to return to winning ways in the Premier League on Sunday when they were held by bottom club Southampton.",
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8", //darkovski
+                "title": "GreenHouse",
+                "category": "Oil",
+                "year": "2021",
+                "price": "900",
+                "imageUrl": "https://i.imgur.com/LmPcBeY.jpg",
+                "description": "A green house inspired by freen pastures",
                 "_createdOn": 1680013127272,
             },
             "1840a313-225c-416a-817a-9954d4609f7c": {
-                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-                "imageUrl": "https://icdn.strettynews.com/wp-content/uploads/2023/03/fbl-eng-pr-man-utd-southampton-1.jpg",
-                "title": "Varane 10, Martinez 9: player ratings from Manchester United 0-0 Southampton",
-                "category": "Premier League",
-                "description": "Manchester United have failed to get back to winning ways in the Premier League as they were held by Southampton but there were mitigating circumstances at Old Trafford.",
-                "text": "Erik ten Hag named a strong side for the game, with Bruno Fernandes playing in a deeper midfield role alongside Casemiro. Jadon Sancho came in for Fred and the young winger played centrally behind Wout Weghorst. That pre-match setup looked encouraging but that would all change roughly 30 minutes into the first half when Casemiro was given his marching orders for a challenge on Carlos Alcaraz. Interestingly, United’s output in all areas of the pitch improved after going down to 10 men and looked like they might win the game after all.",
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8", //darkovski
+                "title": "Worlds 5",
+                "category": "Oil",
+                "year": "2022",
+                "price": "1200",
+                "imageUrl": "https://i.imgur.com/9PnCBE1.jpg",
+                "description": "A painting depicting the duality of our world ",
                 "_createdOn": 1680013404599,
             },
             "126777f5-3277-42ad-b874-76d043b069cb": {
-                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-                "imageUrl": "https://icdn.strettynews.com/wp-content/uploads/2023/03/real-betis-v-manchester-united-round-of-16-leg-two-uefa-europa-league-3.jpg",
-                "title": "Bruno Fernandes wary of Fulham threat ahead of quarter-final tie.",
-                "category": "Premier League",
-                "description": "Manchester United have entered the most exciting part of the season as they are still in the running to add another two trophies to their haul following their Carabao Cup triumph last month.",
-                "text": "Erik ten Hag’s men are fairly secure in their league position in what is turning out to be quite the debut campaign for the Dutchman at Old Trafford. Having already ended United’s six-year wait for a trophy, United are at the quarter-final stage in the FA Cup and the Europa League, with ties against Fulham and Sevilla coming up respectively. First up, Fulham will be making the trip to Old Trafford this weekend and speaking ahead of the game, Bruno Fernandes has admitted that getting past the in-form London side will not be an easy task. “As David said, we have to beat the best to be in the final,” he told the official Manchester United website after David de Gea named Fulham as one of the best teams remaining in the tournament.",
+                "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a", //davinci
+                "title": "The Vetruvian Man",
+                "category": "Ink",
+                "year": "1490",
+                "price": "12 000 000",
+                "imageUrl": "https://as2.ftcdn.net/v2/jpg/00/10/87/51/1000_F_10875137_13gxhpemmcsmWw8qIi4otwwZRLlGnzaf.jpg",
+                "description": "The Vitruvian Man is a drawing by the Italian Renaissance artist and scientist Leonardo da Vinci, dated to c. 1490. Inspired by the writings of the ancient Roman architect Vitruvius, the drawing depicts a nude man in two superimposed positions with his arms and legs apart and inscribed in both a circle and square.",
                 "_createdOn": 1680013448609,
             }
         },

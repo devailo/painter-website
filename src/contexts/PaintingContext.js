@@ -11,7 +11,7 @@ export const PaintingProvider = ({
 
     const navigate = useNavigate()
     const [paintings, setPaintings] = useState([])
-    const paintingsService = paintingsServiceFactory() //auth.accessToken
+    const paintingsService = paintingsServiceFactory() 
 
     useEffect(() => {
         paintingsService.getAll()

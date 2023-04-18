@@ -9,11 +9,12 @@ import { useAuthContext } from "../../contexts/AuthContext"
 import { AddComment } from "./AddComment/AddComment"
 import { usePaintingContext } from "../../contexts/PaintingContext"
 
+import "./PaintingDetails.css"
 
 export const PaintingDetails = () => {
     const { paintingId } = useParams()
     const { userId, isAuthenticated, username } = useAuthContext()
-    const {deletePainting} = usePaintingContext()
+    const { deletePainting } = usePaintingContext()
     const [painting, setPainting] = useState({})
     const paintingsService = useService(paintingsServiceFactory)
     const navigate = useNavigate()
@@ -70,12 +71,20 @@ export const PaintingDetails = () => {
             <h1>Name of artwork - {painting.title} - {painting.year}</h1>
             <div className="info-section">
                 <div className="art-header">
-                    <img className="art-img" src={painting.imageUrl} alt={painting.title} />
-                    <span className="category">{painting.category}</span>
-                    <p className="year">{painting.year}</p>
+                    <div className="art-img">
+                        <img src={painting.imageUrl} alt={painting.title} />
+                    </div>
+
+                    <div className="details">
+                        <div>
+                            <span className="category">{painting.category}</span>
+                            <p className="year">{painting.year} year</p>
+                        </div>
+                        <p className="text">PRICE: {painting.price} lv</p>
+                        <p className="text">{painting.description}</p>
+                    </div>
                 </div>
 
-                <p className="text">{painting.description}</p>
 
                 <div className="details-comments">
                     <h2>Comments:</h2>
@@ -94,8 +103,8 @@ export const PaintingDetails = () => {
 
                 {painting._ownerId === userId && (
                     <div className="buttons">
-                        <Link to={`/gallery/${painting._id}/edit`} className="button">Edit</Link>
-                        <button className="button" onClick={onDeleteClick}>delete</button>
+                        <Link to={`/gallery/${painting._id}/edit`} className="button-details">Edit</Link>
+                        <button className="button-details delete" onClick={onDeleteClick}>delete</button>
                     </div>
                 )}
 

@@ -1,19 +1,24 @@
 import { requestFactory } from "./requester"
 
-const baseUrl = 'http://localhost:3030/data/comments'
+const baseUrl = process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3030'
+    : 'https://server-painter-website.onrender.com'
+
+const fullUrl = `${baseUrl}/data/comments`
+
 const request = requestFactory()
 
 export const getAll = async(paintingId) => {
     const searchQuery = encodeURIComponent(`paintingId="${paintingId}"`)
     const relatoinQuery = encodeURIComponent(`author=_ownerId:users`)
-    const result = await request.get(`${baseUrl}?where=${searchQuery}&load=${relatoinQuery}`)
+    const result = await request.get(`${fullUrl}?where=${searchQuery}&load=${relatoinQuery}`)
     const comments = Object.values(result)
 
     return comments
 }
 
 export const create = async (paintingId, comment) => {
-    const result = await request.post(baseUrl, {paintingId, comment})
+    const result = await request.post(fullUrl, {paintingId, comment})
 
     return result
 }

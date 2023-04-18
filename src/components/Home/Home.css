@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    overflow-y: overlay;
+    background: url('../../../public/images/background_oil.jpg') no-repeat center;
+    background-size: cover;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#main-content {}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(169, 169, 169, 0.028);
+}
+
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 22px rgba(255, 255, 255, 0.938);
+}
+
+#box {
+    height: 100vh;
+    overflow-y: overlay;
+    box-sizing: border-box;
+
+
+}
+
+#welcome-world {
+    width: auto;
+    padding-right: 15px;
+    padding-top: 44px;
+    padding-left: 15px;
+    text-align: center;
+}
+
+#welcome-world .welcome-message {
+    display: inline-block;
+    z-index: 99;
+    left: 0;
+    top: 40%;
+    text-align: center;
+    width: 60%
+}
+
+#welcome-world>img {
+    height: 800px;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 60%;
+    margin-left: auto;
+    padding-left: auto;
+}
+
+.welcome-message h2 {
+    color: #ffffff;
+    font-size: 300%;
+    font-size: 55px;
+    line-height: 1;
+    font-weight: 10;
+    margin-bottom: 8px;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4.8px rgba(0, 0, 0, 0.3);
+    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+}
+
+.welcome-message h3 {
+    color: #ffffff;
+    font-size: 600%;
+    text-shadow: none;
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: uppercase;
+    font-weight: 10;
+    margin-top: 8px;
+    margin-bottom: 46px;
+    text-shadow: 0 2px 4.8px rgba(0, 0, 0, 0.3);
+    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+}
+
+#welcome-world>#home-page {
+    width: 50% fit-content;
+    margin: 0 auto 64px auto;
+    text-align: center;
+}
+
+#home-page {
+    border: 5px solid #ffffff;
+    overflow: hidden;
+    border-radius: 10px;
+    /* padding: 0 55px; */
+    height: auto;
+    width: 70%;
+    padding-bottom: 64px;
+}
+
+.latest-works {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 24px;
+}
+
+
+#home-page>h1 {
+    color: rgb(255, 255, 255);
+    margin: 24px 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+}
+
+.art {
+    width: 200px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    /* border: 5px solid #ffffff; */
+    /* background-color: #ffffff5f; */
+    /* padding: 24px; */
+    background-position: right 35% bottom 45%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    height: auto;
+    color: rgb(255, 255, 255);
+}
+
+.image-wrap {
+    width: 80%;
+    border: 3px solid #ffffff;
+    display: inline-flex;
+flex-direction: column;
+    /* border-radius:12px; */
+    /* overflow: hidden; */
+    position: relative;
+    text-align: center;
+}
+
+.image-wrap>img {
+    max-width: 100%;
+}
+
+.art>h3 {
+    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+
+    font-size: 28px;
+    font-weight: 700;
+    line-height: normal;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+
+
+}
+
+.art>h4 {
+    color: #c2d4f8;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 12px;
+    
+}
+
+.details-btn {
+    font-size: 1.4rem;
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+
+    color: white;
+    padding: 0.9em 1.4em;
+    border: 3px solid  #fefefe;
+    border-radius: 12px;
+    transition: 0.5s;
+
+}
+
+.details-btn:hover {
+    color: white;
+    background-color: #4399f6;
+}
+/* .data-buttons {
+    font-size: 1.4rem;
+    padding-top: 20px;
+    text-align: center;
+} */
+
+
+
+.no-art {
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 60px;
+    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+}

@@ -14,6 +14,7 @@ import { Gallery } from "./components/Gallery/Gallery";
 import { PaintingDetails } from "./components/PaintingDetails/PaintingDetails";
 import { EditPainting } from "./components/EditPainting/EditPainting";
 import { RouteGuard } from "./components/common/RouteGuard";
+import { Profile } from "./components/Profile/Profile";
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
                                     <UploadPainting />
                                 </RouteGuard>
                             } />
+                            <Route path="/painter" element={<Profile/>}/>
                             <Route path="/gallery" element={<Gallery />} />
                             <Route path="/gallery/:paintingId" element={<PaintingDetails />} />
                             <Route path="/gallery/:paintingId/edit" element={

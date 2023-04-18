@@ -1,6 +1,8 @@
 import { usePaintingContext } from "../../contexts/PaintingContext"
 import { GalleryEntry } from "./GalleryEntry/GalleryEntry"
 
+import "./Gallery.css"
+
 export const Gallery = () => {
     const {paintings} = usePaintingContext()
     

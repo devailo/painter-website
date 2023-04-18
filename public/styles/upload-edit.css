@@ -1,23 +1,27 @@
 #upload-page,
 #edit-page {
     position: relative;
-    width: 800px;
+    width: 900px;
     height: auto;
     border-radius: 12px;
     padding: 40px;
     box-sizing: border-box;
     text-align: center;
     border: 5px solid #ffffff;
+    margin: 140px auto;
+    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
     background: #ecf0f3;
     padding: 20px;
     padding-left: 20px;
     height: 20px;
     margin-top: 10px;
     font-size: 18px;
-    border-radius: 50px;
+    border-radius: 12px;
     box-shadow: inset 2px 2px 2px #c0c2c5, inset -2px -2px 2px white;
 }
 
@@ -25,13 +29,14 @@ textarea {
     width: 100%;
     min-width: 20vw;
     min-height: 7em;
-    border: 2px solid #86a480;
-    border-radius: 0.7em;
+    border-radius: 12px;
     font-size: 26px;
-    border-bottom-color: #ecf0f3;
-    background-color: #ecf0f3;
-    border-right-color: #ecf0f3;
     margin-top: 7px;
     color: black;
-    box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
+    border-color: rgba(255, 255, 255, 0);
+    box-shadow: inset 2px 2px 2px #c0c2c5, inset -2px -2px 2px white;
+}
+
+.auth {
+    margin: 140px auto;
 }

@@ -1,0 +1,77 @@
+header .navi{
+    position: fixed;
+    z-index: 2;
+    margin-left: 20px;
+
+}
+.navi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0;
+    background-color: #ffffff;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    color: rgb(0, 0, 0);
+}
+
+.heading {
+    display: inline-block;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 36px;
+    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+    font-weight: lighter;
+}
+
+.heading,
+.public-buttons,
+.auth-buttons {
+    flex:1;
+    margin: 0 20px;
+}
+
+.auth-buttons{
+    text-align: end;
+}
+
+header nav {
+    font-size: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.navi a:hover{
+    color: rgb(95, 95, 95);
+    transition: 0.25s ease-out;
+
+}
+
+.navi a {
+    margin: 0 10px;
+    display: inline-block;
+    position: relative;
+    color: #000000;
+}
+
+.navi a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:  rgb(95, 95, 95);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.navi a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+}
