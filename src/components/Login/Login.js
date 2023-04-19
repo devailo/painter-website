@@ -25,7 +25,7 @@ export const Login = () => {
                     <h1>Login</h1>
 
                     <label htmlFor="email">Email</label>
-                    <input type="email" id="email" name={LoginFormKeys.Email} placeholder="your@email.com" value={values[LoginFormKeys.Email]} onChange={changeHandler} />
+                    <input type="text" id="email" name={LoginFormKeys.Email} placeholder="your@email.com" value={values[LoginFormKeys.Email]} onChange={changeHandler} />
 
                     <label htmlFor="login-pass">Password</label>
                     <input type="password" name={LoginFormKeys.Password} id="login-password" value={values[LoginFormKeys.Password]} onChange={changeHandler} />

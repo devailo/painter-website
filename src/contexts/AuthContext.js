@@ -14,8 +14,13 @@ export const AuthProvider = ({
     const authService = authServiceFactory(auth.accessToken)
 
     const onLoginSubmit = async (data) => {
+        if (Object.values(data).some(x => x === "")) {
+            alert('All fields are required!');
+            return;
+        }
         try {
             const result = await authService.login(data)
+
             setAuth(result)
             navigate('/gallery')
         } catch (error) {
@@ -27,7 +32,13 @@ export const AuthProvider = ({
     const onRegisterSubmit = async (data) => {
         const { rePass, ...registerData } = data;
         if (rePass !== registerData.password) {
+            alert('Passwords dont match');
             return
+        }
+
+        if (Object.values(data).some(x => x === "")) {
+            alert('All fields are required!');
+            return;
         }
 
         try {

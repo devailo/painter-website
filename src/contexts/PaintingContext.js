@@ -11,7 +11,7 @@ export const PaintingProvider = ({
 
     const navigate = useNavigate()
     const [paintings, setPaintings] = useState([])
-    const paintingsService = paintingsServiceFactory() 
+    const paintingsService = paintingsServiceFactory()
 
     useEffect(() => {
         paintingsService.getAll()
@@ -21,12 +21,20 @@ export const PaintingProvider = ({
     }, [])
 
     const onUploadArtSubmit = async (data) => {
+        if (Object.values(data).some(x => x === "")) {
+            alert('All fields are required!');
+            return;
+        }
         const newArt = await paintingsService.create(data)
         setPaintings(state => [...state, newArt])
         navigate('/gallery')
     }
 
     const onEditPaintingSubmit = async (data) => {
+        if (Object.values(data).some(x => x === "")) {
+            alert('All fields are required!');
+            return;
+        }
         const result = await paintingsService.edit(data._id, data)
         setPaintings(state => state.map(x => x._id === data._id ? result : x))
         navigate(`gallery/${data._id}`)

@@ -18,6 +18,10 @@ export const getAll = async(paintingId) => {
 }
 
 export const create = async (paintingId, comment) => {
+    if (comment === "") {
+        alert('No text in comment field!');
+        return;
+    }
     const result = await request.post(fullUrl, {paintingId, comment})
 
     return result
