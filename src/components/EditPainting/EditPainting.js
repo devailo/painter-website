@@ -5,6 +5,8 @@ import { useService } from "../../services/useService"
 import { paintingsServiceFactory } from "../../services/paintingsService"
 import { usePaintingContext } from "../../contexts/PaintingContext"
 
+import "./EditPainting.css"
+
 export const EditPainting = () => {
     const {onEditPaintingSubmit} = usePaintingContext()
     const { paintingId } = useParams()
@@ -40,10 +42,10 @@ export const EditPainting = () => {
                     <input value={values.category} onChange={changeHandler} type="text" name="category" id="category" placeholder="Enter Category Name" />
 
                     <label htmlFor="year">Year</label>
-                    <input value={values.year} onChange={changeHandler} type="number" name="year" id="year" placeholder="Enter year of creation" />
+                    <input value={values.year} onChange={changeHandler} type="text" name="year" id="year" placeholder="Enter year of creation" />
 
                     <label htmlFor="price">Price</label>
-                    <input value={values.price} onChange={changeHandler} type="number" name="price" id="price" min="1" placeholder="Enter Price" />
+                    <input value={values.price} onChange={changeHandler} type="text" name="price" id="price" min="1" placeholder="Enter Price" />
 
                     <label htmlFor="art-img">Image</label>
                     <input value={values.imageUrl} onChange={changeHandler} type="text" name="imageUrl" id="imageUrl" placeholder="Upload artwork..." />

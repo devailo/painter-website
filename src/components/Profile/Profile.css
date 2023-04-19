@@ -1,12 +1,16 @@
-.author-info {
+.painter-info {
+    margin: 80px auto;
+    position: relative;
+    width: 900px;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 20px;
-    margin-left: 60px;
+   
   }
   
-  .author-card {
+  .painter-card {
+    display: flex;
     flex-basis: 300px;
     margin-right: 20px;
     background-color: #f7f7f7;
@@ -18,29 +22,39 @@
   }
   
   .avatar {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 300px;
+  }
+
+  .text-details{
+    margin-left: 20px;
   }
   
   .username {
     margin-top: 10px;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
     text-align: center;
   }
   
   .about, .country, .email {
-    margin-top: 10px;
-    font-size: 16px;
+    margin-top: 5px;
+    font-size: 22px;
   }
   
-  .blog-posts {
-    flex-basis: calc(100% - 320px);
+  .paintings {
+    width: 900px;
+
   }
   
   .section-title {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
+    color: white;
+  }
+
+  .projcard-container{
+    display: flex;
   }

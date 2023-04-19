@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 import { useAuthContext } from "../../contexts/AuthContext"
 import { useForm } from "../../hooks/useForm"
 
+import './Login.css';
+
 const LoginFormKeys = {
     Email: 'email',
     Password: 'password'

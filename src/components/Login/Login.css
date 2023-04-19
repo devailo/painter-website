@@ -10,18 +10,6 @@
 
 }
 
-#register-page {
-    position: relative;
-    width: 900px;
-    height: auto;
-    border-radius: 12px;
-    padding: 40px;
-    box-sizing: border-box;
-    border: 5px solid #ffffff;
-    margin: 140px auto;
-
-}
-
 .container {
     padding: 40px;
 }
@@ -62,9 +50,6 @@ label:nth-of-type(2) {
 input::placeholder {
     color: rgba(184, 179, 179, 0.678);
 }
-
-;
-
 
 label[for="female"] {
     margin-top: 10px;
