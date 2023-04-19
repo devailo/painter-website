@@ -86,6 +86,14 @@ export const PaintingDetails = () => {
                 </div>
 
 
+                {painting._ownerId === userId && (
+                    <div className="buttons">
+                        <Link to={`/gallery/${painting._id}/edit`} className="button-details">Edit</Link>
+                        <button className="button-details delete" onClick={onDeleteClick}>delete</button>
+                    </div>
+                )}
+
+
                 <div className="details-comments">
                     <h2>Comments:</h2>
                     <ul>
@@ -100,13 +108,6 @@ export const PaintingDetails = () => {
                         <p className="no-comment">no comments</p>
                     )}
                 </div>
-
-                {painting._ownerId === userId && (
-                    <div className="buttons">
-                        <Link to={`/gallery/${painting._id}/edit`} className="button-details">Edit</Link>
-                        <button className="button-details delete" onClick={onDeleteClick}>delete</button>
-                    </div>
-                )}
 
             </div>
 

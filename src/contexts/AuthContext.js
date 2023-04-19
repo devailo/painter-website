@@ -24,7 +24,8 @@ export const AuthProvider = ({
             setAuth(result)
             navigate('/gallery')
         } catch (error) {
-            console.log("error logging in");
+            alert('Wrong username or password');
+            return;
         }
 
     }
@@ -46,7 +47,8 @@ export const AuthProvider = ({
             setAuth(result)
             navigate('/gallery')
         } catch (error) {
-            console.log("error registering");
+            alert('there was a problem');
+            return;
         }
     }
 
