@@ -1,3 +1,64 @@
+# Painter Website React.js Project
+
+## About
+The project was at first supposed to be a personal website for a individual painter, but as more features and more accounts were needed for the sake of the project, the website became a hibrid - Portfolio/marketplace/social network. My idea is after the course ends, i am going to split the project in two different websites. One will be the personal portfolio painters site and the other will be the marketplace/social network. 
+
+The web Page is also deployed with firebase for the react part and with render.com for the server. It is live and working: [Here](https://painter-website.web.app/)
+
+![Project Dashboard](https://i.imgur.com/gdF4J2d.png)
+
+## Public part
+
+This part of the platform is designed for non-registered users. These users have access to the following:
+
+* Home page -> 
+Main dashboard page in which the user is welcomed and can see the last 3 uploaded artowrks. 
+* Gallery -> 
+The place where the user can see all uploaded artworks.
+* Artwork Details Page -> 
+A page offering more detailed information about the painting such as: larger image, title, description, painter, price, category and all the comments posted by the registered users.
+* Login-> 
+A page where the login form for already registered users is located.
+* Register-> 
+A page where the register form is located.
+
+## Private part
+
+* Profile -> 
+The page where a painter can view his user information as well as all the artowrks they've uploaded. 
+* Upload Art -> 
+A page with a form for uploading artworks.
+* Details/Edit -> 
+A page with a form for modification of a selected artworks, if the user is the owner.
+* Details/Delete -> 
+A page with a confirmation prompt for deleting owned artworks.
+* Comments -> 
+Guest and users are able to read the comments in the blogs. 
+Logged in users can comment on all the artworks.
+
+## About The Project - Technical Description
+
+### Built With
+
+* [HTML + CSS designed by Ivaylo Stoyanov](https://github.com/devailo)
+* [React.js](https://reactjs.org/)
+* [SoftUni practice server](https://github.com/softuni-practice-server/softuni-practice-server.git)
+
+### To start the practice server:
+
+When you are in the project directory:
+
+Open a command prop window and navigate to the server directory with command  `cd server`.
+
+While you are located in the server directory. To execute the server run the following command:  `node server.js`.
+
+### Authentication
+
+The server is initialized with three users, which can be used for immediate testing:
+* peter@abv.bg : 123456
+* john@abv.bg : 123456
+* davinci@abv.bg : 123456
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
