@@ -3,7 +3,7 @@
 ## About
 The project was at first supposed to be a personal website for a individual painter, but as more features and more accounts were needed for the sake of the project, the website became a hybrid - Portfolio/marketplace/social network. My idea is after the course ends, i am going to split the project in two different websites. One will be the personal portfolio painters site and the other will be the marketplace/social network. 
 
-The web Page is also deployed with firebase for the react part and with render.com for the server. It is live and working: [Here](https://painter-website.web.app/)
+The web Page is also deployed with firebase for the react part and with render.com for the server(bear in mind that the server is very slow and it takes a minute to display the artworks). It is live and working: [Here](https://painter-website.web.app/)
 
 ![Project Dashboard](https://i.imgur.com/gdF4J2d.png)
 
